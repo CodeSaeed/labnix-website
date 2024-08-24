@@ -5,14 +5,23 @@ import p3 from '../Assets/p7.png';
 
 const SuggestedProducts = () => {
   const products = [
-    { src: p1, title: "Haze Measurement Devices", description: "Color & Haze meter NH-M-101 is used for haze and transmittance measurement. It has open measurement area with no limit on sample size, can carry out vertical measurements as well." },
+    { 
+      src: p1, 
+      title: "Haze Measurement Devices", 
+      description: (
+        <>
+          <strong>Color & Haze meter NH-M-101 <br></br></strong> Color & Haze meter NH-M-101 is used for haze and transmittance measurement. It has open measurement area with no limit on sample size, can carry out vertical measurements as well.
+        </>
+      )
+    },
     { src: p2, title: "", description: "Melt Flow Indexer NMFI-101" },
     { src: p3, title: "", description: "Melt Flow Indexer NMFI-101" },
     { src: p1, title: "", description: "Melt Flow Indexer NMFI-101" }
   ];
 
+
   // Set a fixed height for all cards
-  const cardHeight = '320px'; // Adjust as needed
+  const cardHeight = '290px'; // Adjust as needed
   const firstCardWidth = '520px'; // Width for the first card
   const otherCardWidth = '200px'; // Width for the other cards
 
@@ -71,9 +80,7 @@ const SuggestedProducts = () => {
                   height: 'auto', 
                   borderRadius: '5px',
                   marginRight: index === 0 ? '10px' : '0',
-                  marginTop: index === 0 ? '-100px' : '0', // Push image up in the first card only
-                  
-                  
+                  marginTop: index === 0 ? '-8px' : '20px', // Push image up in the first card only; push down in others
                 }}
               />
               <div style={{ 
@@ -82,10 +89,9 @@ const SuggestedProducts = () => {
                 flexDirection: 'column', 
                 justifyContent: 'flex-start', // Align content to the top
                 marginLeft: index === 0 ? '10px' : '0',
-                marginTop: index === 0 ? '-130px' : '0', // Push content up for the first card
+                marginTop: index === 0 ? '-40px' : '0', // Push content up for the first card
                 position: 'relative', // For positioning the content
                 zIndex: 1 // Ensure content is above the image
-                
               }}>
                 <h3 style={{ margin: '0 0 10px', fontSize: '1em', color: product.title === "Haze Measurement Devices" ? '#2f8e94' : '#000' }}>
                   {product.title}
@@ -106,17 +112,19 @@ const SuggestedProducts = () => {
                   zIndex: 2 // Ensure button is above the content
                 }}
               >
-                <button
-                  style={{
-                    backgroundColor: '#2f8e94',
-                    color: 'white',
-                    border: 'none',
-                    padding: '12px 20px', // Increase padding to make button wider
-                    cursor: 'pointer',
-                    fontSize: '1em',
-                    boxSizing: 'border-box',
-                    width: '100%', // Full width of container
-                  }}
+               <button
+  style={{
+    backgroundColor: '#2f8e94',
+    color: 'white',
+    border: 'none',
+    padding: '6px 20px',
+    cursor: 'pointer',
+    fontSize: '1em',
+    boxSizing: 'border-box',
+    width: '30%',
+    position: 'relative', // Add this to enable positioning
+    top: '-40px', // Move the button upward
+  }}
                 >
                   View
                 </button>
