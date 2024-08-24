@@ -319,3 +319,111 @@ body {
 .suggested-products .btn-catalog:hover {
   background-color: #0056b3;
 }
+
+/* Existing styles remain unchanged */
+
+/* Media Queries for Responsiveness */
+
+/* Ensure header text is centered and adjusts for smaller screens */
+@media (max-width: 576px) {
+  .header-section h1 {
+    font-size: 1.2em; /* Smaller font size for smaller screens */
+  }
+}
+
+/* Adjust navbar logo and padding on smaller screens */
+@media (max-width: 992px) {
+  .navbar-logo {
+    max-height: 30px; /* Reduce logo size */
+  }
+  .navbar-nav {
+    padding-right: 15px; /* Reduce padding for navbar items */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    padding-right: 15px;
+  }
+}
+
+/* Adjust featured categories font size and padding on smaller screens */
+@media (max-width: 768px) {
+  .featured-categories {
+    font-size: 1.2em; /* Slightly smaller font size */
+    padding: 5px; /* Reduce padding */
+  }
+}
+
+/* Make product cards stack in a single column on very small screens */
+@media (max-width: 576px) {
+  .product-card {
+    flex: 1 1 100%; /* Full width on small screens */
+  }
+}
+
+/* Adjust product card size for tablets and larger mobile screens */
+@media (max-width: 768px) {
+  .product-card {
+    flex: 1 1 45%; /* 2 per row on medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .product-card {
+    flex: 1 1 30%; /* 3 per row on larger mobile screens */
+  }
+}
+
+/* Adjust footer layout and logo size on smaller screens */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 0; /* Reduce footer padding */
+  }
+  .footer img {
+    max-width: 120px; /* Smaller logo size */
+  }
+}
+
+/* Advertisement bar font size adjustment on small screens */
+@media (max-width: 576px) {
+  .advertisement-bar {
+    font-size: 14px; /* Smaller font size */
+    padding: 5px; /* Reduce padding */
+  }
+}
+
+/* Trending products card adjustments for smaller screens */
+@media (max-width: 768px) {
+  .trending-products .product-card {
+    width: 100%; /* Full width for cards */
+  }
+}
+
+@media (max-width: 576px) {
+  .trending-products .product-card {
+    padding: 10px; /* Reduce padding */
+  }
+  .trending-products .btn-view,
+  .trending-products .btn-quote,
+  .trending-products .btn-catalog {
+    font-size: 0.8em; /* Smaller button font size */
+  }
+}
+
+/* Suggested products card adjustments for smaller screens */
+@media (max-width: 768px) {
+  .suggested-products .product-card {
+    padding: 15px; /* Reduce padding */
+  }
+}
+
+@media (max-width: 576px) {
+  .suggested-products .product-card {
+    padding: 10px; /* Further reduce padding */
+  }
+  .suggested-products .btn-view,
+  .suggested-products .btn-catalog {
+    font-size: 0.8em; /* Smaller button font size */
+  }
+}

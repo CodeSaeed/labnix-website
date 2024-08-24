@@ -10,7 +10,7 @@ const SuggestedProducts = () => {
       title: "Haze Measurement Devices", 
       description: (
         <>
-          <strong>Color & Haze meter NH-M-101 <br></br></strong> Color & Haze meter NH-M-101 is used for haze and transmittance measurement. It has open measurement area with no limit on sample size, can carry out vertical measurements as well.
+          <strong>Color & Haze meter NH-M-101 <br></br></strong> Color & Haze meter NH-M-101 is used for haze and transmittance measurement. It has an open measurement area with no limit on sample size and can carry out vertical measurements as well.
         </>
       )
     },
@@ -18,7 +18,6 @@ const SuggestedProducts = () => {
     { src: p3, title: "", description: "Melt Flow Indexer NMFI-101" },
     { src: p1, title: "", description: "Melt Flow Indexer NMFI-101" }
   ];
-
 
   // Set a fixed height for all cards
   const cardHeight = '290px'; // Adjust as needed
@@ -76,11 +75,11 @@ const SuggestedProducts = () => {
                 src={product.src}
                 alt={product.title}
                 style={{ 
-                  width: '140px', 
+                  width: index === 0 ? '140px' : '100px', // Adjust the width of the images
                   height: 'auto', 
                   borderRadius: '5px',
                   marginRight: index === 0 ? '10px' : '0',
-                  marginTop: index === 0 ? '-8px' : '20px', // Push image up in the first card only; push down in others
+                  marginTop: index === 0 ? '-8px' : '40px', // Push image up in the first card only; push down in others
                 }}
               />
               <div style={{ 
@@ -93,10 +92,19 @@ const SuggestedProducts = () => {
                 position: 'relative', // For positioning the content
                 zIndex: 1 // Ensure content is above the image
               }}>
-                <h3 style={{ margin: '0 0 10px', fontSize: '1em', color: product.title === "Haze Measurement Devices" ? '#2f8e94' : '#000' }}>
+                <h3 style={{ margin: '0 0 5px', fontSize: '1em', color: product.title === "Haze Measurement Devices" ? '#2f8e94' : '#000' }}>
                   {product.title}
                 </h3>
-                <p style={{ margin: '0', fontSize: '0.8em', color: '#555' }}>{product.description}</p>
+                <p style={{ 
+                  margin: '0', 
+                  fontSize: '0.8em', 
+                  color: '#555',
+                  whiteSpace: index === 0 ? 'normal' : 'nowrap', // Prevent wrapping for the second, third, and fourth cards
+                  overflow: 'hidden', // Hide overflow if text is too long
+                  textOverflow: 'ellipsis' // Add ellipsis if text overflows
+                }}>
+                  {product.description}
+                </p>
               </div>
             </div>
             {index === 0 ? (
@@ -112,19 +120,19 @@ const SuggestedProducts = () => {
                   zIndex: 2 // Ensure button is above the content
                 }}
               >
-               <button
-  style={{
-    backgroundColor: '#2f8e94',
-    color: 'white',
-    border: 'none',
-    padding: '6px 20px',
-    cursor: 'pointer',
-    fontSize: '1em',
-    boxSizing: 'border-box',
-    width: '30%',
-    position: 'relative', // Add this to enable positioning
-    top: '-40px', // Move the button upward
-  }}
+                <button
+                  style={{
+                    backgroundColor: '#2f8e94',
+                    color: 'white',
+                    border: 'none',
+                    padding: '6px 20px',
+                    cursor: 'pointer',
+                    fontSize: '1em',
+                    boxSizing: 'border-box',
+                    width: '30%',
+                    position: 'relative', // Add this to enable positioning
+                    top: '-40px', // Move the button upward
+                  }}
                 >
                   View
                 </button>
@@ -176,4 +184,8 @@ const SuggestedProducts = () => {
   );
 };
 
+
+
 export default SuggestedProducts;
+
+
