@@ -212,9 +212,10 @@ body {
   background-color: #358d96; /* Background color */
   color: #ffffff; /* Text color */
   text-align: center;
-  padding: 10px;
+  padding: 5px 0; /* Reduced padding for a shorter height */
   font-size: 16px;
 }
+
 
 .advertisement-bar p {
   margin: 0;

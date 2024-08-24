@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import logo from '../Assets/logo.png'; // Update with the path to your logo
 import AdvertisementBar from './AdvertisementBar'; // Import the new component
+import { FaSearch } from 'react-icons/fa'; // Import the magnifying glass icon
 import { Link } from 'react-scroll'; // Import Link from react-scroll
 
 const NavbarComponent = () => {
@@ -78,6 +79,10 @@ const NavbarComponent = () => {
                 </Link>
               </Nav.Link>
             </Nav>
+            <div className="d-flex align-items-center ms-3">
+              <FaSearch color="#358d96" size={20} />
+              <span className="ms-2" style={{ color: '#358d96' }}>Enquiry</span>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

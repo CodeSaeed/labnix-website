@@ -10,38 +10,42 @@ const AdvertisementBar = () => {
       display: 'flex', 
       justifyContent: 'space-between', 
       alignItems: 'center', 
-      padding: '10px',
-      flexDirection: 'row',
-      flexWrap: 'wrap',
+      padding: '5px 10px', /* Adjusted padding */
+      backgroundColor: '#358d96', /* Ensure background color consistency */
+      color: 'white',
       textAlign: 'center',
+      fontSize: '16px' /* Adjusted font size if needed */
     }}>
       <div style={{ 
         flex: '1', 
         display: 'flex', 
         justifyContent: 'center', 
+        alignItems: 'center', /* Center align icons vertically */
         gap: '10px',
-        marginBottom: '10px',
       }}>
-        <FontAwesomeIcon icon={faFacebookF} style={{ color: 'white' }} />
-        <FontAwesomeIcon icon={faInstagram} style={{ color: 'white' }} />
-        <FontAwesomeIcon icon={faTwitter} style={{ color: 'white' }} />
-        <FontAwesomeIcon icon={faLinkedinIn} style={{ color: 'white' }} />
+        <FontAwesomeIcon icon={faFacebookF} />
+        <FontAwesomeIcon icon={faInstagram} />
+        <FontAwesomeIcon icon={faTwitter} />
+        <FontAwesomeIcon icon={faLinkedinIn} />
       </div>
       <div style={{ 
         flex: '1', 
-        textAlign: 'center', 
-        marginBottom: '10px',
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center',
       }}>
         <p style={{ margin: 0, display: 'inline-flex', alignItems: 'center' }}>
-          <FontAwesomeIcon icon={faPhone} style={{ color: 'white', marginRight: '8px' }} />
+          <FontAwesomeIcon icon={faPhone} style={{ marginRight: '8px' }} />
           +245 124586 414
         </p>
       </div>
       <div style={{ 
         flex: '1', 
-        textAlign: 'center',
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center',
       }}>
-        <p style={{ margin: 0, color: 'white' }}>
+        <p style={{ margin: 0 }}>
           My Account
         </p>
       </div>

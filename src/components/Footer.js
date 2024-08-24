@@ -1,15 +1,13 @@
 import React from 'react';
 import logo from '../Assets/logofooter.png'; // Adjust the path to your logo
+import facebookIcon from '../Assets/FB.png'; // Adjust the path to your Facebook icon
+import twitterIcon from '../Assets/Twitter.jpg'; // Adjust the path to your Twitter icon
+import linkedinIcon from '../Assets/In.png'; // Adjust the path to your LinkedIn icon
+import googlePlusIcon from '../Assets/G+.png'; // Adjust the path to your Google Plus icon
+import newsImage1 from '../Assets/news.jpg'; // Adjust the path to your first news image
+import newsImage2 from '../Assets/news1.jpg'; // Adjust the path to your second news image
 
 const Footer = () => {
-  // Placeholder image URLs
-  const facebookIcon = 'https://via.placeholder.com/30';
-  const twitterIcon = 'https://via.placeholder.com/30';
-  const linkedinIcon = 'https://via.placeholder.com/30';
-  const googlePlusIcon = 'https://via.placeholder.com/30';
-  const newsImage1 = 'https://via.placeholder.com/80x50';
-  const newsImage2 = 'https://via.placeholder.com/80x50';
-
   return (
     <div className="footer" style={{ backgroundColor: '#030915', color: 'white', padding: '80px 0', fontFamily: 'Arial, sans-serif', fontSize: '14px' }}>
       <div className="container">
@@ -21,11 +19,19 @@ const Footer = () => {
               In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien.
             </p>
             {/* Social Media Icons */}
-            <div style={{ display: 'flex', gap: '15px', marginTop: '20px' }}>
-              <a href="#"><img src={facebookIcon} alt="Facebook" /></a>
-              <a href="#"><img src={twitterIcon} alt="Twitter" /></a>
-              <a href="#"><img src={linkedinIcon} alt="LinkedIn" /></a>
-              <a href="#"><img src={googlePlusIcon} alt="Google Plus" /></a>
+            <div style={{ display: 'flex', gap: '10px', marginTop: '20px', justifyContent: 'flex-start' }}>
+              <a href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '35px', height: '35px', borderRadius: '50%', backgroundColor: '#fff', boxShadow: '0 2px 4px rgba(0,0,0,0.2)', overflow: 'hidden' }}>
+                <img src={facebookIcon} alt="Facebook" style={{ width: '24px', height: '24px', objectFit: 'cover' }} />
+              </a>
+              <a href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '35px', height: '35px', borderRadius: '50%', backgroundColor: '#fff', boxShadow: '0 2px 4px rgba(0,0,0,0.2)', overflow: 'hidden' }}>
+                <img src={twitterIcon} alt="Twitter" style={{ width: '24px', height: '24px', objectFit: 'cover' }} />
+              </a>
+              <a href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '35px', height: '35px', borderRadius: '50%', backgroundColor: '#fff', boxShadow: '0 2px 4px rgba(0,0,0,0.2)', overflow: 'hidden' }}>
+                <img src={linkedinIcon} alt="LinkedIn" style={{ width: '24px', height: '24px', objectFit: 'cover' }} />
+              </a>
+              <a href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '35px', height: '35px', borderRadius: '50%', backgroundColor: '#fff', boxShadow: '0 2px 4px rgba(0,0,0,0.2)', overflow: 'hidden' }}>
+                <img src={googlePlusIcon} alt="Google Plus" style={{ width: '24px', height: '24px', objectFit: 'cover' }} />
+              </a>
             </div>
           </div>
 
@@ -38,7 +44,7 @@ const Footer = () => {
                 <p style={{ textAlign: 'left', margin: 0, lineHeight: '1.6', fontSize: '14px', maxWidth: '300px', marginLeft: '-15px', color: '#A0A4A8' }}>
                   Did son unreserved themselves indulgence its...
                 </p>
-              </div>
+              </div><br></br>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                 <img src={newsImage2} alt="News 2" style={{ marginBottom: '10px', width: '80px', height: '50px' }} />
                 <p style={{ textAlign: 'left', margin: 0, lineHeight: '1.6', fontSize: '14px', maxWidth: '300px', marginLeft: '-15px', color: '#A0A4A8' }}>
