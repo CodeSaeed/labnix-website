@@ -9,7 +9,7 @@ import newsImage2 from '../Assets/news1.jpg'; // Adjust the path to your second 
 
 const Footer = () => {
   return (
-    <div className="footer" style={{ backgroundColor: '#030915', color: 'white', padding: '80px 0', fontFamily: 'Arial, sans-serif', fontSize: '14px' }}>
+    <div className="footer" style={{ backgroundColor: '#030915', color: 'white', padding: '80px 0 20px', fontFamily: 'Arial, sans-serif', fontSize: '14px' }}>
       <div className="container">
         <div className="row" style={{ display: 'flex', justifyContent: 'space-between' }}>
           {/* Logo and Description */}
@@ -44,7 +44,7 @@ const Footer = () => {
                 <p style={{ textAlign: 'left', margin: 0, lineHeight: '1.6', fontSize: '14px', maxWidth: '300px', marginLeft: '-15px', color: '#A0A4A8' }}>
                   Did son unreserved themselves indulgence its...
                 </p>
-              </div><br></br>
+              </div><br />
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                 <img src={newsImage2} alt="News 2" style={{ marginBottom: '10px', width: '80px', height: '50px' }} />
                 <p style={{ textAlign: 'left', margin: 0, lineHeight: '1.6', fontSize: '14px', maxWidth: '300px', marginLeft: '-15px', color: '#A0A4A8' }}>
@@ -106,7 +106,7 @@ const Footer = () => {
 
         </div>
       </div>
-      <hr style={{ border: '1px solid white', margin: '30px 0' }} />
+      <hr style={{ border: '1px solid white', margin: '20px 0' }} />
       <div style={{ textAlign: 'center', fontSize: '14px', color: '#83868D' }}>
         <p style={{ margin: 0 }}>© Copyright All rights reserved 2021.</p>
       </div>

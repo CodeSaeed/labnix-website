@@ -22,6 +22,8 @@ const AdvertisementBar = () => {
         justifyContent: 'center', 
         alignItems: 'center', /* Center align icons vertically */
         gap: '10px',
+        position: 'relative', /* Enable relative positioning */
+        left: '-50px' /* Move icons a bit left */
       }}>
         <FontAwesomeIcon icon={faFacebookF} />
         <FontAwesomeIcon icon={faInstagram} />
