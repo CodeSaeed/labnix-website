@@ -36,3 +36,57 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* Trending Products Section */
+.trending-products, .suggested-products {
+  margin-top: 40px;
+}
+
+.trending-products h2, .suggested-products h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.featured-product-card {
+  display: flex;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  flex: 2;
+}
+
+.featured-product-details {
+  margin-left: 15px;
+}
+
+.product-buttons button {
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #358d96;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.product-buttons button:hover {
+  background-color: #2f8e94;
+}
