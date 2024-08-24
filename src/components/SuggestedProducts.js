@@ -1,14 +1,14 @@
 import React from 'react';
 import p1 from '../Assets/p1.png';
-import p2 from '../Assets/p2.png';
-import p3 from '../Assets/p3.png';
+import p2 from '../Assets/p1.png';
+import p3 from '../Assets/p7.png';
 
 const SuggestedProducts = () => {
   const products = [
-    { src: p1, title: "Haze Measurement Devices", description: "Color & Haze meter NHM-101 is used for haze and transmittance measurement..." },
-    { src: p2, title: "Melt Flow Indexer", description: "Melt Flow Indexer NMFI-101" },
-    { src: p3, title: "Melt Flow Indexer", description: "Melt Flow Indexer NMFI-101" },
-    { src: p1, title: "Additional Product", description: "Additional product description for the fourth item" }
+    { src: p1, title: "Haze Measurement Devices", description: "Color & Haze meter NH-M-101 is used for haze and transmittance measurement. It has open measurement area with no limit on sample size, can carry out vertical measurements as well." },
+    { src: p2, title: "", description: "Melt Flow Indexer NMFI-101" },
+    { src: p3, title: "", description: "Melt Flow Indexer NMFI-101" },
+    { src: p1, title: "", description: "Melt Flow Indexer NMFI-101" }
   ];
 
   // Set a fixed height for all cards
@@ -22,7 +22,7 @@ const SuggestedProducts = () => {
         style={{
           textAlign: 'center',
           fontSize: '1.5em',
-          marginTop: '20px',
+          marginTop: '0px',
           marginBottom: '20px',
           fontWeight: 'bold',
           color: '#000',
@@ -50,6 +50,8 @@ const SuggestedProducts = () => {
               height: cardHeight, // Fixed height for all cards
               boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)',
               boxSizing: 'border-box',
+              position: 'relative', // Ensure positioning context for button
+              overflow: 'hidden' // Ensure content does not overflow
             }}
           >
             <div style={{
@@ -59,13 +61,32 @@ const SuggestedProducts = () => {
               flexDirection: index === 0 ? 'row' : 'column', // Adjust layout for first card
               flex: '1', // Allow content to take available space
               overflow: 'hidden', // Ensure content doesn't overflow
+              position: 'relative', // For positioning the image
             }}>
               <img
                 src={product.src}
                 alt={product.title}
-                style={{ width: '120px', height: 'auto', marginRight: index === 0 ? '10px' : '0', marginBottom: index !== 0 ? '10px' : '0', borderRadius: '5px' }}
+                style={{ 
+                  width: '140px', 
+                  height: 'auto', 
+                  borderRadius: '5px',
+                  marginRight: index === 0 ? '10px' : '0',
+                  marginTop: index === 0 ? '-100px' : '0', // Push image up in the first card only
+                  
+                  
+                }}
               />
-              <div style={{ flex: '1', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <div style={{ 
+                flex: '1', 
+                display: 'flex', 
+                flexDirection: 'column', 
+                justifyContent: 'flex-start', // Align content to the top
+                marginLeft: index === 0 ? '10px' : '0',
+                marginTop: index === 0 ? '-130px' : '0', // Push content up for the first card
+                position: 'relative', // For positioning the content
+                zIndex: 1 // Ensure content is above the image
+                
+              }}>
                 <h3 style={{ margin: '0 0 10px', fontSize: '1em', color: product.title === "Haze Measurement Devices" ? '#2f8e94' : '#000' }}>
                   {product.title}
                 </h3>
@@ -75,12 +96,14 @@ const SuggestedProducts = () => {
             {index === 0 ? (
               <div
                 style={{
+                  position: 'absolute',
+                  bottom: '10px',
+                  left: '50%',
+                  transform: 'translateX(-50%)', // Center the button
+                  width: 'calc(100% - 20px)', // Full width minus padding
                   display: 'flex',
-                  flexDirection: 'row',
-                  marginTop: 'auto',
-                  padding: '10px',
-                  borderTop: '1px solid #2f8e94',
                   justifyContent: 'center', // Center the button
+                  zIndex: 2 // Ensure button is above the content
                 }}
               >
                 <button
@@ -88,10 +111,11 @@ const SuggestedProducts = () => {
                     backgroundColor: '#2f8e94',
                     color: 'white',
                     border: 'none',
-                    padding: '10px',
+                    padding: '12px 20px', // Increase padding to make button wider
                     cursor: 'pointer',
-                    fontSize: '0.9em',
+                    fontSize: '1em',
                     boxSizing: 'border-box',
+                    width: '100%', // Full width of container
                   }}
                 >
                   View
