@@ -5,40 +5,52 @@ import { faFacebookF, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/
 
 const AdvertisementBar = () => {
   return (
-    <div className="advertisement-bar" style={{ 
-      display: 'flex', 
-      justifyContent: 'space-between', 
-      alignItems: 'center', 
-      padding: '5px 15px',  
-      backgroundColor: '#2A878E', 
-      color: '#ffffff', 
-      fontSize: '16px', 
-    }}>
-      <div style={{ 
-        flex: '1', 
-        display: 'flex', 
-        justifyContent: 'flex-start', 
-        alignItems: 'center', 
-        gap: '10px',
-        transform: 'translateX(130px)', // Moves only the icons slightly to the left
-      }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '5px 15px',
+        backgroundColor: '#358d96',
+        color: '#ffffff',
+        fontSize: '16px',
+        flexWrap: 'wrap', // Allow wrapping for smaller screens
+      }}
+    >
+      <div
+        style={{
+          flex: '1',
+          display: 'flex',
+          justifyContent: 'flex-start',
+          alignItems: 'center',
+          gap: '10px',
+          marginBottom: '5px', // Space below this section on smaller screens
+        }}
+      >
         <FontAwesomeIcon icon={faFacebookF} />
         <FontAwesomeIcon icon={faInstagram} />
         <FontAwesomeIcon icon={faTwitter} />
         <FontAwesomeIcon icon={faLinkedinIn} />
       </div>
-      <div style={{ 
-        flex: '1', 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center',
-      }}>
-        <p style={{ 
-          margin: 0, 
-          display: 'inline-flex', 
+      <div
+        style={{
+          flex: '1',
+          display: 'flex',
+          justifyContent: 'center',
           alignItems: 'center',
-          fontSize: '18px', 
-        }}>
+          marginBottom: '5px', // Space below this section on smaller screens
+        }}
+      >
+        <p
+          style={{
+            margin: 0,
+            display: 'inline-flex',
+            alignItems: 'center',
+            fontSize: '18px',
+            textAlign: 'center', // Center the text
+          }}
+        >
           <FontAwesomeIcon icon={faPhone} style={{ marginRight: '8px', fontSize: '20px' }} />
           <span style={{ fontSize: '20px' }}>
             <span style={{ transform: 'translateY(0px)', display: 'inline-block' }}>+24</span>
@@ -52,14 +64,17 @@ const AdvertisementBar = () => {
           </span>
         </p>
       </div>
-      <div style={{ 
-        flex: '1', 
-        display: 'flex', 
-        justifyContent: 'flex-end', 
-        alignItems: 'center',
-      }}>
-         <p style={{ margin: 0, marginRight: '90px' }}> {/* Adjust the marginRight to push My Account left */}
-         My Account
+      <div
+        style={{
+          flex: '1',
+          display: 'flex',
+          justifyContent: 'flex-end',
+          alignItems: 'center',
+          marginBottom: '5px', // Space below this section on smaller screens
+        }}
+      >
+        <p style={{ margin: 0 }}>
+          My Account
         </p>
       </div>
     </div>
