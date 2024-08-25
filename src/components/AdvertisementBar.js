@@ -26,6 +26,7 @@ const AdvertisementBar = () => {
           alignItems: 'center',
           gap: '10px',
           marginBottom: '5px', // Space below this section on smaller screens
+          marginLeft: '10px', // Add margin to align icons slightly to the right
         }}
       >
         <FontAwesomeIcon icon={faFacebookF} />
@@ -71,6 +72,7 @@ const AdvertisementBar = () => {
           justifyContent: 'flex-end',
           alignItems: 'center',
           marginBottom: '5px', // Space below this section on smaller screens
+          marginRight: '10px', // Add margin to align "My Account" slightly to the left
         }}
       >
         <p style={{ margin: 0 }}>

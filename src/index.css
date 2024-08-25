@@ -1,6 +1,4 @@
-/* index.css */
-
-/* Existing styles */
+/* Base styles */
 
 body {
   font-family: Arial, sans-serif;
@@ -13,539 +11,238 @@ body {
 }
 
 .header-section h1 {
-  font-family: Arial, sans-serif; /* Use sans-serif font */
-  font-size: 1.5em; /* Adjust font size as needed */
-  font-weight: bold; /* Make the heading bold */
-  color: #000000; /* Set font color to black */
-  margin: 0; /* Remove default margin */
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
 }
 
 .header-section + * {
-  margin-top: 40px; /* Add space below the header-section */
+  margin-top: 40px;
 }
 
 /* Navbar styles */
 
 .navbar {
-  background-color: #ffffff; /* Background color of the navbar */
-  border-bottom: 1px solid #ddd; /* Bottom border line */
-  position: relative; /* Ensure relative positioning for the pseudo-element */
-  padding-bottom: 40px; /* Padding below the navbar */
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  padding-bottom: 40px;
 }
 
 .navbar::after {
-  content: ""; /* Empty content for pseudo-element */
+  content: "";
   display: block;
-  position: absolute; /* Absolute positioning to control the position of the line */
-  bottom: 0; /* Align the line to the bottom of the navbar */
+  position: absolute;
+  bottom: 0;
   left: 0;
-  width: 100%; /* Full width of the navbar */
-  border-bottom: 1px solid #ddd; /* Border line styling */
-  margin-top: 40px; /* Add margin to push the border line further down */
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  margin-top: 40px;
 }
 
 .navbar-spacer {
-  height: 40px; /* Space below the line */
+  height: 40px;
 }
 
 .navbar-logo {
-  max-height: 40px; /* Adjust the height of the logo */
-  width: auto; /* Maintain aspect ratio */
+  max-height: 40px;
+  width: auto;
 }
 
 .navbar-nav {
   display: flex;
-  justify-content: center; /* Center-align items horizontally */
-  flex: 1; /* Allow the nav to take up available space */
-  margin-left: auto; /* Adjust the left margin to center items */
-  margin-right: auto; /* Adjust the right margin to center items */
-  padding-left: 0px; /* Add padding to space out from the edges */
-  padding-right: 120px; /* Add padding to space out from the edges */
+  justify-content: center;
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 120px;
 }
 
 .navbar-nav .nav-link {
-  color: #000000; /* Link color */
-  font-weight: bold; /* Make the text bold */
+  color: #000000;
+  font-weight: bold;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #000000; /* Color on hover */
+  color: #000000;
 }
 
 .navbar-toggler {
-  border-color: #000000; /* Border color of the toggle button */
+  border-color: #000000;
 }
 
 .navbar-toggler-icon {
-  background-image: none; /* Remove default icon image */
+  background-image: none;
 }
 
-/* New styles for Featured Categories */
+/* Featured Categories */
 
 .featured-categories {
-  font-family: Arial, sans-serif; /* Ensure sans-serif font is used */
-  font-size: 1.5em; /* Adjust font size as needed */
-  color: #000; /* Set font color to black */
-  background-color: #fff; /* Set background color to white */
-  padding: 10px; /* Add padding around the text */
-  margin-bottom: 20px; /* Add space below the section */
+  font-size: 1.5em;
+  color: #000;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .featured-section .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between cards */
+  gap: 20px;
 }
+
+/* Product Cards */
 
 .product-card {
-  border: 1px solid #ccc; /* Light border color */
-  background-color: #f1f1f1; /* Light grey background color */
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
   padding: 15px;
   border-radius: 5px;
-  text-align: center; /* Center-align text inside the card */
-  max-width: 100%; /* Ensure the card doesn't exceed container width */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack child elements vertically */
-  margin-bottom: 20px; /* Space below each card */
-}
-
-.product-card-content {
-  display: flex; /* Use flexbox to align image and text side by side */
-  align-items: flex-start; /* Align items to the start of the container */
-}
-
-.product-card-text {
-  display: flex; /* Use flexbox to stack text and image */
-  flex-direction: column; /* Stack text vertically */
-  margin-right: 15px; /* Space between text and image */
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .product-card img {
-  width: 100%; /* Set image width to fill container */
-  height: auto; /* Maintain aspect ratio */
-  border: none; /* Remove any border */
+  width: 100%;
+  height: auto;
 }
 
 .product-card h2 {
-  margin: 0; /* Remove default margin */
-  font-size: 1.2em; /* Adjust title font size */
-  line-height: 1.4; /* Ensure line height is adjusted to fit within one line */
-  white-space: normal; /* Allow text to wrap to the next line */
-  text-align: center; /* Center-align the text */
-}
-
-/* Ensure responsiveness and card size management */
-
-@media (min-width: 576px) {
-  .product-card {
-    flex: 1 1 45%; /* Adjust size to take up 45% of the container width on small screens */
-  }
-}
-
-@media (min-width: 768px) {
-  .product-card {
-    flex: 1 1 30%; /* Adjust size to take up 30% of the container width on medium screens */
-  }
-}
-
-@media (min-width: 992px) {
-  .product-card {
-    flex: 1 1 22%; /* Adjust size to take up 22% of the container width on large screens */
-  }
-}
-
-/* Footer styles */
-
-.footer {
-  background-color: #343e40;
-  color: #fff;
-  padding: 40px 0;
-}
-
-.footer a {
-  color: #fff;
-}
-
-.footer .quick-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer .quick-links ul li {
-  margin-bottom: 10px;
-}
-
-.footer .social-icons a {
-  margin-right: 10px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer .social-icons a:hover {
-  color: #2f8e94;
-}
-
-.footer img {
-  max-width: 150px;
-  margin-bottom: 20px; /* Add space below the logo */
-  margin-left: -10px; /* Move the logo a bit to the left */
-}
-
-.footer a {
-  color: white; /* Ensure links are visible against dark background */
-}
-
-.footer hr {
-  border: 1px solid white;
-  margin: 20px 0;
-}
-
-.footer .copyright {
-  text-align: center;
-  padding: 10px;
-}
-
-/* Advertisement Bar styles */
-
-.advertisement-bar {
-  background-color: #358d96; /* Background color */
-  color: #ffffff; /* Text color */
-  text-align: center;
-  padding: 5px 0; /* Reduced padding for a shorter height */
-  font-size: 16px;
-}
-
-
-.advertisement-bar p {
   margin: 0;
-}
-/* ... existing styles ... */
-
-.trending-products .product-card {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.trending-products .product-card img {
-  width: 80%; /* Adjust image width as needed */
-  height: auto;
-  margin-bottom: 15px;
-}
-
-.trending-products .product-card h3 {
-  margin-bottom: 10px;
   font-size: 1.2em;
-}
-
-.trending-products .product-card p {
-  margin-bottom: 15px;
-  font-size: 0.9em;
-}
-
-.trending-products .product-card-actions {
-  display: flex;
-  justify-content: space-between;
-  width: 100%; /* Ensure buttons take up full width */
-}
-
-
-.trending-products .btn-view,
-.trending-products .btn-quote,
-.trending-products .btn-catalog {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.9em; /* Adjust button font size */
-}
-
-/* ... other styles ... */
-/* Suggested Products Section */
-.suggested-products h2 {
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-.suggested-products .product-card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 5px;
+  line-height: 1.4;
+  white-space: normal;
   text-align: center;
 }
 
-.suggested-products .product-card img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-}
+/* Responsiveness */
 
-.suggested-products .product-card h3 {
-  margin-bottom: 10px;
-  font-size: 1.1em;
-}
-
-.suggested-products .product-card p {
-  margin-bottom: 15px;
-  font-size: 0.9em;
-}
-
-.suggested-products .product-card-actions {
-  display: flex;
-  justify-content: space-around;
-}
-
-.suggested-products .btn-view,
-.suggested-products .btn-catalog {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.suggested-products .btn-view:hover,
-.suggested-products .btn-catalog:hover {
-  background-color: #0056b3;
-}
-
-/* Existing styles remain unchanged */
-
-/* Media Queries for Responsiveness */
-
-/* Ensure header text is centered and adjusts for smaller screens */
 @media (max-width: 576px) {
   .header-section h1 {
-    font-size: 1.2em; /* Smaller font size for smaller screens */
+    font-size: 1.2em;
   }
-}
 
-/* Adjust navbar logo and padding on smaller screens */
-@media (max-width: 992px) {
-  .navbar-logo {
-    max-height: 30px; /* Reduce logo size */
-  }
-  .navbar-nav {
-    padding-right: 15px; /* Reduce padding for navbar items */
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-nav {
-    padding-right: 15px;
-  }
-}
-
-/* Adjust featured categories font size and padding on smaller screens */
-@media (max-width: 768px) {
-  .featured-categories {
-    font-size: 1.2em; /* Slightly smaller font size */
-    padding: 5px; /* Reduce padding */
-  }
-}
-
-/* Make product cards stack in a single column on very small screens */
-@media (max-width: 576px) {
   .product-card {
-    flex: 1 1 100%; /* Full width on small screens */
+    flex: 1 1 100%;
   }
-}
 
-/* Adjust product card size for tablets and larger mobile screens */
-@media (max-width: 768px) {
-  .product-card {
-    flex: 1 1 45%; /* 2 per row on medium screens */
-  }
-}
-
-@media (max-width: 992px) {
-  .product-card {
-    flex: 1 1 30%; /* 3 per row on larger mobile screens */
-  }
-}
-
-/* Adjust footer layout and logo size on smaller screens */
-@media (max-width: 768px) {
-  .footer {
-    padding: 20px 0; /* Reduce footer padding */
-  }
-  .footer img {
-    max-width: 120px; /* Smaller logo size */
-  }
-}
-
-/* Advertisement bar font size adjustment on small screens */
-@media (max-width: 576px) {
   .advertisement-bar {
-    font-size: 14px; /* Smaller font size */
-    padding: 5px; /* Reduce padding */
+    font-size: 14px;
+    padding: 5px;
   }
-}
 
-/* Trending products card adjustments for smaller screens */
-@media (max-width: 768px) {
   .trending-products .product-card {
-    width: 100%; /* Full width for cards */
+    padding: 10px;
   }
-}
 
-@media (max-width: 576px) {
-  .trending-products .product-card {
-    padding: 10px; /* Reduce padding */
-  }
   .trending-products .btn-view,
   .trending-products .btn-quote,
   .trending-products .btn-catalog {
-    font-size: 0.8em; /* Smaller button font size */
+    font-size: 0.8em;
   }
-}
-
-/* SuggestedProducts.css */
-
-/* Base styles for the SuggestedProducts component */
-.suggested-products {
-  padding: 20px;
-  background-color: #fff;
-  width: 100%;
-}
-
-.suggested-products h2 {
-  text-align: center;
-  font-size: 1.5em;
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #000;
-}
-
-.suggested-products-container {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 20px;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.suggested-product-card {
-  border: 1px solid #2f8e94;
-  background-color: #fff;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: row;
-  width: 520px;
-  height: 290px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-}
-
-.suggested-product-card img {
-  width: 140px;
-  height: auto;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-.suggested-product-card-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 10px;
-  margin-top: -40px;
-  position: relative;
-  z-index: 1;
-}
-
-.suggested-product-card-content h3 {
-  margin: 0 0 5px;
-  font-size: 1em;
-}
-
-.suggested-product-card-content p {
-  margin: 0;
-  font-size: 0.8em;
-  color: #555;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.suggested-product-card button {
-  background-color: #2f8e94;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 0.9em;
-  flex: 1;
-}
-
-.suggested-product-card button:last-child {
-  border-right: 1px solid #fff;
-}
-
-.suggested-product-card .view-button {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 20px);
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-}
-
-.suggested-product-card .view-button button {
-  width: 30%;
-  position: relative;
-  top: -40px;
 }
 
 @media (max-width: 768px) {
-  .suggested-products-container {
+  .navbar-logo {
+    max-height: 30px;
+  }
+  .navbar-nav {
+    padding-right: 15px;
+  }
+
+  .featured-categories {
+    font-size: 1.2em;
+    padding: 5px;
+  }
+
+  .product-card {
+    flex: 1 1 45%;
+  }
+
+  .footer {
+    padding: 20px 0;
+  }
+
+  .footer img {
+    max-width: 120px;
+  }
+
+  .trending-products .product-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-card {
+    flex: 1 1 30%;
+  }
+}
+
+/* Base styles for product cards */
+.product-card {
+  /* Basic styling for product cards */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Styles for mobile screens */
+@media (max-width: 768px) {
+  .product-container {
+    display: flex;
     flex-direction: column;
-    overflow-x: visible;
+    align-items: center;
   }
 
-  .suggested-product-card {
-    width: 100%;
-    margin-bottom: 20px;
-    flex-direction: column;
+  .product-card {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
+
+/* Styles for tablets and small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .suggested-product-card img {
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 10px;
+  .product-card {
+    width: 45%;
+    margin: 10px;
+  }
+}
+
+/* Styles for larger desktops */
+@media (min-width: 1025px) {
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
-  .suggested-product-card-content {
-    margin-left: 0;
-    margin-top: 0;
-  }
-
-  .suggested-product-card .view-button button {
-    width: 100%;
-    top: auto;
-    bottom: 10px;
-  }
-
-  .suggested-product-card button {
-    padding: 8px;
+  .product-card {
+    width: 30%;
+    margin: 10px;
   }
 }
