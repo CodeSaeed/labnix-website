@@ -10,7 +10,7 @@ const SuggestedProducts = () => {
       title: "Haze Measurement Devices", 
       description: (
         <>
-          <strong>Color & Haze meter NH-M-101 <br></br></strong> Color & Haze meter NH-M-101 is used for haze and transmittance measurement. It has an open measurement area with no limit on sample size and can carry out vertical measurements as well.
+          <strong>Color & Haze meter NH-M-101 <br /></strong> Color & Haze meter NH-M-101 is used for haze and transmittance measurement. It has an open measurement area with no limit on sample size and can carry out vertical measurements as well.
         </>
       )
     },
@@ -19,8 +19,7 @@ const SuggestedProducts = () => {
     { src: p1, title: "", description: "Melt Flow Indexer NMFI-101" }
   ];
 
-  // Set a fixed height for all cards
-  const cardHeight = '290px'; // Adjust as needed
+  const cardHeight = '290px'; // Fixed height for all cards
   const firstCardWidth = '520px'; // Width for the first card
   const otherCardWidth = '200px'; // Width for the other cards
 
@@ -40,10 +39,15 @@ const SuggestedProducts = () => {
       </h2>
       <div style={{
         display: 'flex',
-        flexWrap: 'nowrap', // Keep all cards in a single line
+        flexWrap: 'nowrap', // Keep all cards in a single line for web view
         overflowX: 'auto', // Allow horizontal scrolling if needed
         gap: '20px', // Space between cards
         alignItems: 'flex-start', // Align cards to the top of the container
+        justifyContent: 'flex-start', // Align items to the start of the container
+        '@media (max-width: 768px)': {
+          flexDirection: 'column', // Stack cards vertically on small screens
+          overflowX: 'visible', // Remove horizontal scrolling on small screens
+        },
       }}>
         {products.map((product, index) => (
           <div
@@ -53,23 +57,31 @@ const SuggestedProducts = () => {
               backgroundColor: '#fff',
               borderRadius: '5px',
               display: 'flex',
-              flexDirection: index === 0 ? 'row' : 'column', // Adjust layout for first card
-              width: index === 0 ? firstCardWidth : otherCardWidth, // Adjust width of first card
+              flexDirection: index === 0 ? 'row' : 'column', // Adjust layout for the first card
+              width: index === 0 ? firstCardWidth : otherCardWidth, // Adjust width of the first card
               height: cardHeight, // Fixed height for all cards
               boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)',
               boxSizing: 'border-box',
               position: 'relative', // Ensure positioning context for button
-              overflow: 'hidden' // Ensure content does not overflow
+              overflow: 'hidden', // Ensure content does not overflow
+              '@media (max-width: 768px)': {
+                width: '100%', // Full width of container on small screens
+                marginBottom: '20px', // Add space between stacked cards
+                flexDirection: 'column', // Stack cards vertically
+              },
             }}
           >
             <div style={{
               display: 'flex',
               alignItems: 'center', // Center-align items vertically
               padding: '10px',
-              flexDirection: index === 0 ? 'row' : 'column', // Adjust layout for first card
+              flexDirection: index === 0 ? 'row' : 'column', // Adjust layout for the first card
               flex: '1', // Allow content to take available space
               overflow: 'hidden', // Ensure content doesn't overflow
               position: 'relative', // For positioning the image
+              '@media (max-width: 768px)': {
+                flexDirection: 'column', // Stack image and content vertically
+              },
             }}>
               <img
                 src={product.src}
@@ -80,6 +92,11 @@ const SuggestedProducts = () => {
                   borderRadius: '5px',
                   marginRight: index === 0 ? '10px' : '0',
                   marginTop: index === 0 ? '-8px' : '40px', // Push image up in the first card only; push down in others
+                  '@media (max-width: 768px)': {
+                    marginTop: '0', // Remove margin on small screens
+                    width: '100%', // Full width of the card on small screens
+                    marginBottom: '10px', // Add space below image on small screens
+                  },
                 }}
               />
               <div style={{ 
@@ -132,6 +149,11 @@ const SuggestedProducts = () => {
                     width: '30%',
                     position: 'relative', // Add this to enable positioning
                     top: '-40px', // Move the button upward
+                    '@media (max-width: 768px)': {
+                      width: '100%', // Full width of button on small screens
+                      top: 'auto', // Reset top positioning on small screens
+                      bottom: '10px', // Position button at the bottom on small screens
+                    },
                   }}
                 >
                   View
@@ -157,6 +179,9 @@ const SuggestedProducts = () => {
                     flex: '1',
                     borderRight: '1px solid #fff', // White line between buttons
                     boxSizing: 'border-box',
+                    '@media (max-width: 768px)': {
+                      padding: '8px', // Adjust padding on small screens
+                    },
                   }}
                 >
                   View
@@ -171,6 +196,9 @@ const SuggestedProducts = () => {
                     fontSize: '0.9em',
                     flex: '1',
                     boxSizing: 'border-box',
+                    '@media (max-width: 768px)': {
+                      padding: '8px', // Adjust padding on small screens
+                    },
                   }}
                 >
                   Catalog
@@ -184,8 +212,4 @@ const SuggestedProducts = () => {
   );
 };
 
-
-
 export default SuggestedProducts;
-
-
